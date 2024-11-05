@@ -1,0 +1,20 @@
+apiVersion: vais.vigilo.no/v1alpha1
+kind: Application
+metadata:
+    name: onedhub-docs
+spec:
+    image: ghcr.io/vigilo-as/onedhub-docs:sha-cf89e34
+    replicas: 1
+    liveness:
+      path: /isAlive
+    readiness:
+      path: /isReady
+    ingresses:
+    - https://docs.onedhub.io/
+    resources:
+        limits:
+            cpu: 100m
+            memory: 128Mi
+        requests:
+            cpu: 20m
+            memory: 32Mi
