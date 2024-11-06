@@ -5,7 +5,8 @@ layout: home
 hero:
   name: "OnEdHub"
   text: "Documentation"
-  tagline: Vigilo OnEdHub
+  tagline: "This is an early version of the documentation for OnEdHub and is subject to change."
+  #tagline: Vigilo OnEdHub
   actions:
     - theme: brand
       text: What is OnEdHub?
