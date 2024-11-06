@@ -6,7 +6,7 @@ the first in Europe to be certified according to the IMS OneRoster standard, whi
 education sector. We believe this is essential for an administrative system in the education sector, given the type of
 information that the solution contains and exchanges with other systems.
 
-<img alt="OnEdHub external system illustration" src="../onedhub-external-system.png" width="550"/>
+<img alt="OnEdHub external system illustration" src="/onedhub-external-system.png" width="550"/>
 
 Through Onedhub, we aim to refine data-sharing functionality by offering an integration platform that provides core
 functionality for managing kindergartens and schools. This core functionality includes managing personal data in
