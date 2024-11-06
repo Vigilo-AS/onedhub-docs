@@ -2,8 +2,8 @@ import {withMermaid} from "vitepress-plugin-mermaid";
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
-    title: "VAIS documentation",
-    description: "VAIS documentation",
+    title: "OnEdHub documentation",
+    description: "OnEdHub documentation",
     head: [['link', {rel: 'icon', type: 'image/png', href: '/favicon.png'}]],
     ignoreDeadLinks: true,
     themeConfig: {
@@ -22,7 +22,13 @@ export default withMermaid({
 
         sidebar: [
             {
-                text: 'Explanations',
+                text: "OnEdHub",
+                items: [
+                    {text: "What is OnEdHub", link: "/onedhub/what-is-onedhub"},
+                ]
+            },
+            {
+                text: 'OneRoster',
                 items: [
                     {text: 'OnEdHub specific metadata', link: '/oneroster/metadata'},
                     {text: 'Authentication', link: '/oneroster/auth'},
