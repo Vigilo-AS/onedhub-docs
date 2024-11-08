@@ -17,8 +17,15 @@ third-party services access to the platform. This approach allows customers to a
 to their specific needs. Through Onedhub, we aim to make it easier, faster, and more affordable to integrate new
 services with the customer's other solutions. Vigilo will certify third-party providers to ensure that all data
 transfers are seamless, secure, and accurate. These services will then be presented in the Marketplace alongside
-Vigilo's own products. The combination of an open and scalable integration platform with Vigilo's Marketplace will give
-customers far more flexibility than today. Rather than being tied to long contracts and costly implementation projects,
+Vigilo's own products. The combination of an open and scalable integration platform will give customers far more
+flexibility than today. Rather than being tied to long contracts and costly implementation projects,
 customers will be able to add and replace modules easily, ensuring that they always have the most up-to-date and
 best-suited system for their needs.
+
+## Architecture
+
+OnEdHub is built on a microservices architecture, where each service is responsible for a specific part of the system.
+It is completely decoupled from Vigilo's other systems, which means that it can be scaled independently and has no
+performance impact on other parts of Vigilo. OnEdHub has its own data storage and is synchronized in real-time with
+Vigilo.
 

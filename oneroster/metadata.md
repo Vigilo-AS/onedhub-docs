@@ -2,46 +2,67 @@
 
 ## User
 
-| Key                              | Description                                     | Type         |
-|----------------------------------|-------------------------------------------------|--------------|
-| `onedhub.clientIds`              | *Internal use only* (internal id of student)    | `List<UUID>` |
-| `onedhub.birthDate`              | Date of birth                                   | `LocalDate`  |
-| `onedhub.gender`                 | `male` or `female`                              | `String`     | 
-| `onedhub.formOfWrittenNorwegian` | `nn` or `nb`                                    | `String`     | 
-| `onedhub.firstLanguage`          | Language codes according to ISO 639 alpha 3     | `String`     |
-| `onedhub.employeeId`             | *Internal use only* (internal id of employee)   | `UUID`       |
-| `onedhub.employeeNumber`         | Employee number from ??                         | `String`     |
-| `onedhub.employeeFromDate`       | Start-date for the employee                     | `LocalDate`  |
-| `onedhub.employeeToDate`         | End-data (until, not included) for the employee | `LocalDate`  |
+| Key                              | Format                                                                   | Type         | Description                                                             |
+|----------------------------------|--------------------------------------------------------------------------|--------------|-------------------------------------------------------------------------|
+| `onedhub.clientIds`              |                                                                          | `List<UUID>` | *Internal use only* (internal id of student)                            |
+| `onedhub.birthDate`              | `YYYY-MM-DD` ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601))        | `Date`       | Date of birth                                                           |
+| `onedhub.gender`                 |                                                                          | `String`     | `male` or `female`                                                      | 
+| `onedhub.formOfWrittenNorwegian` |                                                                          | `String`     | `nn` or `nb`                                                            | 
+| `onedhub.firstLanguage`          | (ISO 639 alpha 3)[https://en.wikipedia.org/wiki/List_of_ISO_639-3_codes] | `String`     | A first language (L1), native language, native tongue, or mother tongue |
+| `onedhub.employeeId`             |                                                                          | `UUID`       | *Internal use only* (internal id of employee)                           |
+| `onedhub.employeeNumber`         |                                                                          | `String`     | Employee number                                                         |
+| `onedhub.employeeFromDate`       | `YYYY-MM-DD` ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601))        | `Date`       | Start-date for the employee                                             |
+| `onedhub.employeeToDate`         | `YYYY-MM-DD` ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601))        | `Date`       | End-data (until, not included) for the employee                         |
 
 ## Org
 
-| Key                                      | Description                                                                                      | Type                        |
-|------------------------------------------|--------------------------------------------------------------------------------------------------|-----------------------------|
-| `onedhub.city`                           | City of organization                                                                             | `String`                    |
-| `onedhub.classes`                        | Link to Classes for this org                                                                     | `Uri`                       |
-| `onedhub.postalCode`                     | Postal code of organization                                                                      | `String`                    |
-| `onedhub.students`                       | Link to Students (user-objects) for this org                                                     | `Uri`                       |
-| `onedhub.homePageUrl`                    | Home page url of organization                                                                    | `String`                    |
-| `onedhub.teachers`                       | Link to Teachers (user-objects) for this org                                                     | `Uri`                       |
-| `onedhub.managerFirstName`               | First name of the manager of the organization                                                    | `String`                    |
-| ~~`onedhub.gsiId`~~                      | [**deprecated**] There is no replacement for this.                                               |                             |
-| `onedhub.hrUnitIds`                      | From user interface «Enhetsinformasjon/ Tilleggsinformasjon», e.g."hrUnitIds": ["35211","35240"] | `List<String>`              |
-| `onedhub.email`                          | Email of the organization                                                                        | `String`                    |
-| `onedhub.coordinates`                    | Coordinates of the organization                                                                  | [Coordinates](#coordinates) |
-| `onedhub.courses`                        | Link to Courses for this org                                                                     | `Uri`                       |
-| ~~`onedhub.externalOrganizationNumber`~~ | [**deprecated**] There is no replacement for this.                                               |                             |
-| `onedhub.managerLastName`                | Last name of the manager of the organization                                                     | `String`                    |
-| `onedhub.enrollments`                    | Link to Enrollments for this org                                                                 | `Uri`                       |
-| `onedhub.phoneNumber`                    | Phone number of the organization                                                                 | `String`                    |
-| `onedhub.ownership`                      | Schools: `Privat` or `Offentlig´.  ChildCare: `Privat` or `Kommunal`                             | `String`                    |            |
-| `onedhub.academicSessions`               | Link to AcademicSessions for this org                                                            | `Uri`                       |
-| `onedhub.addressline2`                   | Addressline 2 of the organization                                                                | `String`                    |
-| `onedhub.addressline1`                   | Addressline 1 of the organization                                                                | `String`                    |
-| `onedhub.shortName`                      | Short name of the organization                                                                   | `String`                    |
-| `onedhub.key`                            | Only for tenants: Tenant `key`                                                                   | `String`                    |
+| Key                        | Format | Type                        | Description                                                                                      |
+|----------------------------|--------|-----------------------------|--------------------------------------------------------------------------------------------------|
+| `onedhub.city`             |        | `String`                    | City of organization                                                                             |
+| `onedhub.classes`          |        | `Uri`                       | Link to Classes for this org                                                                     |
+| `onedhub.postalCode`       |        | `String`                    | Postal code of organization                                                                      |
+| `onedhub.students`         |        | `Uri`                       | Link to Students (user-objects) for this org                                                     |
+| `onedhub.homePageUrl`      |        | `String`                    | Home page url of organization                                                                    |
+| `onedhub.teachers`         |        | `Uri`                       | Link to Teachers (user-objects) for this org                                                     |
+| `onedhub.managerFirstName` |        | `String`                    | First name of the manager of the organization                                                    |
+| `onedhub.hrUnitIds`        |        | `List<String>`              | From user interface «Enhetsinformasjon/ Tilleggsinformasjon», e.g."hrUnitIds": ["35211","35240"] |
+| `onedhub.email`            |        | `String`                    | Email of the organization                                                                        |
+| `onedhub.coordinates`      |        | [Coordinates](#coordinates) | Coordinates of the organization                                                                  |
+| `onedhub.courses`          |        | `Uri`                       | Link to Courses for this org                                                                     |
+| `onedhub.managerLastName`  |        | `String`                    | Last name of the manager of the organization                                                     |
+| `onedhub.enrollments`      |        | `Uri`                       | Link to Enrollments for this org                                                                 |
+| `onedhub.phoneNumber`      |        | `String`                    | Phone number of the organization                                                                 |
+| `onedhub.ownership`        |        | `String`                    | Schools: `Privat` or `Offentlig`.  ChildCare: `Privat` or `Kommunal`                             |            |
+| `onedhub.academicSessions` |        | `Uri`                       | Link to AcademicSessions for this org                                                            |
+| `onedhub.addressline2`     |        | `String`                    | Addressline 2 of the organization                                                                |
+| `onedhub.addressline1`     |        | `String`                    | Addressline 1 of the organization                                                                |
+| `onedhub.shortName`        |        | `String`                    | Short name of the organization                                                                   |
+| `onedhub.key`              |        | `String`                    | Only for tenants: Tenant `key`                                                                   |
 
-### Coordinates
+### Course
+
+| Key                   | Format | Type | Description                                                                                                                                           |
+|-----------------------|--------|------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `onedhub.initialYear` |        | Int  | Initial year of course. To get the course for a student you need to find the year the student started in 1. grade and get the `course` for that year. |
+
+### AcademicSession
+
+| Key              | Format | Type              | Description                |
+|------------------|--------|-------------------|----------------------------|
+| `onedhub.org`    |        | [OrgRef](#OrgRef) | Link to organization       |
+| `onedhub.status` |        | `String`          | Status of academic session |
+
+### Metadata models
+
+#### Coordinates
+
+| Property    | Type     | Description |
+|-------------|----------|-------------|
+| `latitude`  | `Double` |             |
+| `longitude` | `Double` |             |
+| `origin`    | `String` |             |
+
+#### Example
 
 ```json
 {
@@ -51,15 +72,20 @@
 }
 ```
 
-### Course
+#### OrgRef
 
-| Key                   | Description                                                                                                                                           | Type |
-|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|------|
-| `onedhub.initialYear` | Initial year of course. To get the course for a student you need to find the year the student started in 1. grade and get the `course` for that year. | Int  |
+| Property    | Type     | Description |
+|-------------|----------|-------------|
+| `href`      | `Uri`    |             |
+| `sourcedId` | `String` |             |
+| `type`      | `String` |             |
 
-### AcademicSession
+#### Example
 
-| Key              | Description                | Type     |
-|------------------|----------------------------|----------|
-| `onedhub.org`    | Link to organization       | `Uri`    |
-| `onedhub.status` | Status of academic session | `String` |
+```json
+{
+  "href": "https://api.onedhub.io/vigilo.no/ims/oneroster/rostering/v1p2/orgs/1",
+  "sourcedId": "1",
+  "type": "org"
+}
+```
