@@ -39,22 +39,22 @@
 | `onedhub.shortName`        |        | `String`                    | Short name of the organization                                                                   |
 | `onedhub.key`              |        | `String`                    | Only for tenants: Tenant `key`                                                                   |
 
-### Course
+## Course
 
 | Key                   | Format | Type | Description                                                                                                                                           |
 |-----------------------|--------|------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `onedhub.initialYear` |        | Int  | Initial year of course. To get the course for a student you need to find the year the student started in 1. grade and get the `course` for that year. |
 
-### AcademicSession
+## AcademicSession
 
 | Key              | Format | Type              | Description                |
 |------------------|--------|-------------------|----------------------------|
 | `onedhub.org`    |        | [OrgRef](#OrgRef) | Link to organization       |
 | `onedhub.status` |        | `String`          | Status of academic session |
 
-### Metadata models
+## Metadata models
 
-#### Coordinates
+### Coordinates
 
 | Property    | Type     | Description |
 |-------------|----------|-------------|
@@ -72,7 +72,7 @@
 }
 ```
 
-#### OrgRef
+### OrgRef
 
 | Property    | Type     | Description |
 |-------------|----------|-------------|
