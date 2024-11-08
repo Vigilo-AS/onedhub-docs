@@ -8,7 +8,7 @@
 | `onedhub.birthDate`              | `YYYY-MM-DD` ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601))        | `Date`       | Date of birth                                                           |
 | `onedhub.gender`                 |                                                                          | `String`     | `male` or `female`                                                      | 
 | `onedhub.formOfWrittenNorwegian` |                                                                          | `String`     | `nn` or `nb`                                                            | 
-| `onedhub.firstLanguage`          | (ISO 639 alpha 3)[https://en.wikipedia.org/wiki/List_of_ISO_639-3_codes] | `String`     | A first language (L1), native language, native tongue, or mother tongue |
+| `onedhub.firstLanguage`          | [ISO 639 alpha 3](https://en.wikipedia.org/wiki/List_of_ISO_639-3_codes) | `String`     | A first language (L1), native language, native tongue, or mother tongue |
 | `onedhub.employeeId`             |                                                                          | `UUID`       | *Internal use only* (internal id of employee)                           |
 | `onedhub.employeeNumber`         |                                                                          | `String`     | Employee number                                                         |
 | `onedhub.employeeFromDate`       | `YYYY-MM-DD` ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601))        | `Date`       | Start-date for the employee                                             |
