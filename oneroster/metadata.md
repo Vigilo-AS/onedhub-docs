@@ -47,10 +47,10 @@
 
 ## AcademicSession
 
-| Key              | Format | Type              | Description                |
-|------------------|--------|-------------------|----------------------------|
-| `onedhub.org`    |        | [OrgRef](#OrgRef) | Link to organization       |
-| `onedhub.status` |        | `String`          | Status of academic session |
+| Key              | Format | Type     | Description                |
+|------------------|--------|----------|----------------------------|
+| `onedhub.org`    |        | `Uri`    | Link to organization       |
+| `onedhub.status` |        | `String` | Status of academic session |
 
 ## Metadata models
 
@@ -69,23 +69,5 @@
   "latitude": 60.36521,
   "longitude": 5.18717,
   "altitude": "GeoNorge"
-}
-```
-
-### OrgRef
-
-| Property    | Type     | Description |
-|-------------|----------|-------------|
-| `href`      | `Uri`    |             |
-| `sourcedId` | `String` |             |
-| `type`      | `String` |             |
-
-#### Example
-
-```json
-{
-  "href": "https://api.onedhub.io/vigilo.no/ims/oneroster/rostering/v1p2/orgs/1",
-  "sourcedId": "1",
-  "type": "org"
 }
 ```
