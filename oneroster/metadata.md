@@ -45,6 +45,29 @@
 |-----------------------|--------|------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `onedhub.initialYear` |        | Int  | Initial year of course. To get the course for a student you need to find the year the student started in 1. grade and get the `course` for that year. |
 
+## Class
+
+| Key                 | Format | Type     | Description                                         |
+|---------------------|--------|----------|-----------------------------------------------------|
+| `onedhub.groupType` |        | `String` | See [Group types](#Group-types) for possible values |
+
+### Group types
+
+| Type             | Description         |
+|------------------|---------------------|
+| Class            | Klasse              |  
+| LearningSupport  | Spesialundervisning |
+| SnoGroup         |                     |
+| SubjectGroup     | Faggruppe           |
+| GnoGroup         |                     |
+| SfaGroup         |                     |
+| SfoGroup         |                     |
+| PasTestGroup     |                     |
+| OtherUsers       |                     |
+| TpoGroup         |                     |
+| NativeLanguage   |                     |
+| TofGroup         |                     |
+
 ## AcademicSession
 
 | Key              | Format | Type     | Description                |
