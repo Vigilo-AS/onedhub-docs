@@ -53,20 +53,20 @@
 
 ### Group types
 
-| Type             | Description         |
-|------------------|---------------------|
-| Class            | Klasse              |  
-| LearningSupport  | Spesialundervisning |
-| SnoGroup         |                     |
-| SubjectGroup     | Faggruppe           |
-| GnoGroup         |                     |
-| SfaGroup         |                     |
-| SfoGroup         |                     |
-| PasTestGroup     |                     |
-| OtherUsers       |                     |
-| TpoGroup         |                     |
-| NativeLanguage   |                     |
-| TofGroup         |                     |
+| Type              | Description         |
+|-------------------|---------------------|
+| `Class`           | Klasse              |  
+| `LearningSupport` | Spesialundervisning |
+| `SnoGroup`        |                     |
+| `SubjectGroup`    | Faggruppe           |
+| `GnoGroup`        |                     |
+| `SfaGroup`        |                     |
+| `SfoGroup`        |                     |
+| `PasTestGroup`    |                     |
+| `OtherUsers`      |                     |
+| `TpoGroup`        |                     |
+| `NativeLanguage`  |                     |
+| `TofGroup`        |                     |
 
 ## AcademicSession
 
