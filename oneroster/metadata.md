@@ -49,7 +49,7 @@
 
 | Key                 | Format | Type     | Description                                         |
 |---------------------|--------|----------|-----------------------------------------------------|
-| `onedhub.groupType` |        | `String` | See [Group types](#Group-types) for possible values |
+| `onedhub.groupType` |        | `String` | See [Group types](#group-types) for possible values |
 
 ### Group types
 
