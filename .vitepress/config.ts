@@ -11,7 +11,8 @@ export default withMermaid({
         nav: [
             {text: 'Home', link: '/'},
             {text: 'Vigilo Core API', link: '/onedhub/apis#vigilo-core-api'},
-            {text: 'OneRoster', link: '/oneroster'}
+            {text: 'OneRoster', link: '/oneroster'},
+            {text: 'Integrations', link: '/integrations'}
         ],
         footer: {
             message: 'Made with ❤️ by Vigilo AS',
@@ -35,6 +36,12 @@ export default withMermaid({
                     {text: 'OnEdHub specific metadata', link: '/oneroster/metadata'},
                     {text: 'Authentication', link: '/oneroster/auth'},
                     {text: 'Environments', link: '/oneroster/environments'},
+                ]
+            },
+            {
+                text: 'Integrations',
+                items: [
+                    {text: 'FINT HR Integration', link: '/integrations/fint-hr'},
                 ]
             }
         ],

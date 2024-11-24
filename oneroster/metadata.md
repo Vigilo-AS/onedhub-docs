@@ -53,20 +53,20 @@
 
 ### Group types
 
-| Type              | Description         |
-|-------------------|---------------------|
-| `Class`           | Klasse              |  
-| `LearningSupport` | Spesialundervisning |
-| `SnoGroup`        |                     |
-| `SubjectGroup`    | Faggruppe           |
-| `GnoGroup`        |                     |
-| `SfaGroup`        |                     |
-| `SfoGroup`        |                     |
-| `PasTestGroup`    |                     |
-| `OtherUsers`      |                     |
-| `TpoGroup`        |                     |
-| `NativeLanguage`  |                     |
-| `TofGroup`        |                     |
+| Type              | Description                                                |
+|-------------------|------------------------------------------------------------|
+| `Class`           | Klasse                                                     |  
+| `LearningSupport` | Spesialundervisning                                        |
+| `SnoGroup`        | SNO eller Særskilt norskopplæring                          |
+| `SubjectGroup`    | Faggruppe                                                  |
+| `GnoGroup`        | GNO eller Grunnleggende norskopplæring                     |
+| `SfaGroup`        | SFA eller Skolefritidsaktivitet                            |
+| `SfoGroup`        | SFO eller Skolefritidsordning                              |
+| `PasTestGroup`    | PAS prøvegrupper                                           |
+| `OtherUsers`      | Andre brukere                                              |
+| `TpoGroup`        | Ekstra/TPO  eller Tilpasset opplæring                      |
+| `NativeLanguage`  | Morsmålsopplæring (eng: Native-language instruction group) |
+| `TofGroup`        | TOF eller Tospråklig fagopplæring                          |
 
 ## AcademicSession
 
