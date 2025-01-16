@@ -47,9 +47,10 @@
 
 ## Class
 
-| Key                 | Format | Type     | Description                                         |
-|---------------------|--------|----------|-----------------------------------------------------|
-| `onedhub.groupType` |        | `String` | See [Group types](#group-types) for possible values |
+| Key                    | Format | Type           | Description                                         |
+|------------------------|--------|----------------|-----------------------------------------------------|
+| `onedhub.groupType`    |        | `String`       | See [Group types](#group-types) for possible values |
+| `onedhub.parentGroups` |        | `List<String>` | List of names of the parent groups                  |
 
 ### Group types
 
