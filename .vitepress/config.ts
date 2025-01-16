@@ -36,6 +36,7 @@ export default withMermaid({
                     {text: 'OnEdHub specific metadata', link: '/oneroster/metadata'},
                     {text: 'Authentication', link: '/oneroster/auth'},
                     {text: 'Environments', link: '/oneroster/environments'},
+                    {text: 'Legal guardians', link: '/oneroster/legal-guardians'},
                 ]
             },
             {
