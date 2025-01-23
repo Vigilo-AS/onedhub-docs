@@ -10,7 +10,7 @@ export default withMermaid({
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             {text: 'Home', link: '/'},
-            {text: 'Vigilo Core API', link: '/onedhub/apis#vigilo-core-api'},
+            {text: 'Vigilo Core API', link: '/core'},
             {text: 'OneRoster', link: '/oneroster'},
             {text: 'Integrations', link: '/integrations'}
         ],
@@ -28,6 +28,13 @@ export default withMermaid({
                 items: [
                     {text: "What is OnEdHub", link: "/onedhub"},
                     {text: "APIs", link: "/onedhub/apis"},
+                ]
+            },
+            {
+                text: 'Vigilo Core API',
+                items: [
+                    {text: 'Variable pay receipt', link: '/core/variable-pay-receipt'},
+
                 ]
             },
             {
