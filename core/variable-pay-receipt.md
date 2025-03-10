@@ -1,4 +1,4 @@
-# Variable pay receipt
+# Variable pay receipt module
 
 ## Payload
 
