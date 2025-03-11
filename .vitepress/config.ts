@@ -15,6 +15,7 @@ export default withMermaid({
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             {text: 'Home', link: '/'},
+            {text: 'OnEdHub', link: '/onedhub'},
             {text: 'Vigilo Core API', link: '/core'},
             {text: 'OneRoster', link: '/oneroster'},
             {text: 'Integrations', link: '/integrations'}
@@ -37,6 +38,7 @@ export default withMermaid({
                     {text: "What is OnEdHub", link: "/onedhub"},
                     {text: "APIs", link: "/onedhub/apis"},
                     {text: 'Authentication', link: '/onedhub/auth'},
+                    {text: 'Scopes', link: '/scopes'},
                     {text: "Environments", link: "/onedhub/environments"},
                 ]
             },
