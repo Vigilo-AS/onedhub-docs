@@ -1,7 +1,4 @@
 <script setup>
-import ScopeBadge from '../components/ScopeBadge.vue';
-import GetBadge from '../components/GetBadge.vue';
-import PatchBadge from '../components/PatchBadge.vue';
 </script>
 
 # Base module
@@ -70,7 +67,7 @@ A person can be both a `student` and a `employee`.
 <hr/>
 <p>
 Endpoints 
-<GetBadge path="/students"/> <GetBadge path="/students/{id}"/> <PatchBadge path="/employess/{id}"/>
+<GetBadge path="/students"/> <GetBadge path="/students/{id}"/> <PatchBadge path="/employees/{id}"/>
 </p>
 <p>
 Scope
@@ -86,13 +83,18 @@ related to the student role.
 
 #### Properties
 
-| Property       | Description                                                                           | Writable | Example/Type           |
-|----------------|---------------------------------------------------------------------------------------|:--------:|------------------------|
-| `id`           | This is the system id in Vigilo                                                       |          | `UUID`                 |
-| `alias`        | A human readable identifier for the employee                                          |    x     |                        |
-| `fromDate`     | Start of the student enrollment for the school. ISO 8601 format `YYYY-MM-DD`          |          |                        |
-| `toDate`       | End of the student enrollment for the school. ISO 8601 format `YYYY-MM-DD`            |          |                        |
-| `modifiedTime` | Last time the object was modified in UTC time. ISO 8601 format `YYYY-MM-DDThh:mm:ssZ` |          | `2025-01-10T12:48:06Z` |
+| Property                         | Description                                                                           | Writable | Example/Type           |
+|----------------------------------|---------------------------------------------------------------------------------------|:--------:|------------------------|
+| `id`                             | This is the system id in Vigilo                                                       |          | `UUID`                 |
+| `alias`                          | A human readable identifier for the employee                                          |    x     |                        |
+| `fromDate`                       | Start of the student enrollment for the school. ISO 8601 format `YYYY-MM-DD`          |          |                        |
+| `toDate`                         | End of the student enrollment for the school. ISO 8601 format `YYYY-MM-DD`            |          |                        |
+| `modifiedTime`                   | Last time the object was modified in UTC time. ISO 8601 format `YYYY-MM-DDThh:mm:ssZ` |          | `2025-01-10T12:48:06Z` |
+| `contactInformation/email`       | Private email.                                                                        |    x     |                        |   
+| `contactInformation/phoneNumber` | Private phone number. Could be either mobile or land line.                            |    x     |                        |   
+
+> **Note:** `ContactInformation` on `student` is taken from `person`. When updating `contactInformation` on `student` it
+> will also update `contactInformation` on `person` and vice versa.
 
 #### Links
 
@@ -143,8 +145,16 @@ is related to the employee role.
 
 ### School
 
-<Badge text="GET /schools" type="info"/>
-<Badge text="GET /schools/{id}" type="info"/>
+<hr/>
+<p>
+Endpoints 
+<GetBadge path="/schools"/> <GetBadge path="/schools/{id}"/>
+</p>
+<p>
+Scope
+<ScopeBadge scopeShortName="core-api.schools.read"/>
+</p>
+<hr/>
 
 The `school` resource represents a school. The school resource has information about the school, like name, address,
 `students` and `employees`.
