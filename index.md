@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "OnEdHub"
   text: "Documentation"
-  tagline: "This is an early version of the documentation for OnEdHub and is subject to change."
+  tagline: "Get access to your data. Own your data!"
   #tagline: Vigilo OnEdHub
   actions:
     - theme: brand
@@ -19,16 +19,14 @@ features:
   - icon: 📚
     title: Documentation
     details: The documentation for the OnEdHub API.
-    link: /oneroster
+    link: /onedhub
   - icon: 🔐
     title: Authentication
-    details: The OneRoster API uses OAuth 2.0 for authentication.
+    details: OnEdHub uses OAuth 2.0 for authentication.
     link: /oneroster/auth
-#  - icon:
-#    title: Build and deploy 
-#    details: To make your application available to others, you need to build and deploy it. VAIS attempts to make this as simple as possible by providing a set of composable GitHub Actions.
-#  - icon: 💡
-#    title: Observability
-#    details: Building and deploying applications is only half the battle. The other half is to be able to observe what's going on in your application. This is where observability comes in.
+  - icon: 🌐
+    title: Environments 
+    link: /onedhub/environments
+    details: We're offering several environments for different purposes.
 ---
 

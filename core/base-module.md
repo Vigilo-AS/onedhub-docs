@@ -1,6 +1,9 @@
+<script setup>
+</script>
+
 # Base module
 
-The base module is a module that contains entities that are shared between other modules.
+The base module is a module that contains resources that are shared between other modules.
 
 The base url for Core modules is
 `https://api.<environment>.onedhub.io/<orgId>/api/core/<resource>`
@@ -21,8 +24,18 @@ Examples:
 
 ### Person
 
-<Badge text="GET /persons" type="info"/>
-<Badge text="GET /persons/{id}" type="info"/>
+<hr/>
+<p>
+Endpoints 
+<GetBadge path="/persons"/> <GetBadge path="/persons/{id}"/> <PatchBadge path="/persons/{id}"/>
+</p>
+<p>
+Scope 
+<ScopeBadge scopeShortName="core-api.persons.read"/>
+<ScopeBadge scopeShortName="core-api.persons.write"/>
+</p>
+<hr/>
+
 
 The `person` resource represents a physical private person. This resource has information about the person
 that is related to the person private context. E.g. private email, mobile or address.
@@ -51,22 +64,37 @@ A person can be both a `student` and a `employee`.
 
 ### Student
 
-<Badge text="GET /students" type="info"/>
-<Badge text="GET /students/{id}" type="info"/>
-<Badge text="PATCH /students/{id}" type="info"/>
+<hr/>
+<p>
+Endpoints 
+<GetBadge path="/students"/> <GetBadge path="/students/{id}"/> <PatchBadge path="/employees/{id}"/>
+</p>
+<p>
+Scope
+<ScopeBadge scopeShortName="core-api.students.read"/>
+<ScopeBadge scopeShortName="core-api.students.write"/>
+</p>
+<hr/>
+
+
 
 The `student` resource represents a `person` role as a student at a `school`. All information on the `student` object is
 related to the student role.
 
 #### Properties
 
-| Property       | Description                                                                           | Writable | Example/Type           |
-|----------------|---------------------------------------------------------------------------------------|:--------:|------------------------|
-| `id`           | This is the system id in Vigilo                                                       |          | `UUID`                 |
-| `alias`        | A human readable identifier for the employee                                          |    x     |                        |
-| `fromDate`     | Start of the student enrollment for the school. ISO 8601 format `YYYY-MM-DD`          |          |                        |
-| `toDate`       | End of the student enrollment for the school. ISO 8601 format `YYYY-MM-DD`            |          |                        |
-| `modifiedTime` | Last time the object was modified in UTC time. ISO 8601 format `YYYY-MM-DDThh:mm:ssZ` |          | `2025-01-10T12:48:06Z` |
+| Property                         | Description                                                                           | Writable | Example/Type           |
+|----------------------------------|---------------------------------------------------------------------------------------|:--------:|------------------------|
+| `id`                             | This is the system id in Vigilo                                                       |          | `UUID`                 |
+| `alias`                          | A human readable identifier for the employee                                          |    x     |                        |
+| `fromDate`                       | Start of the student enrollment for the school. ISO 8601 format `YYYY-MM-DD`          |          |                        |
+| `toDate`                         | End of the student enrollment for the school. ISO 8601 format `YYYY-MM-DD`            |          |                        |
+| `modifiedTime`                   | Last time the object was modified in UTC time. ISO 8601 format `YYYY-MM-DDThh:mm:ssZ` |          | `2025-01-10T12:48:06Z` |
+| `contactInformation/email`       | Private email.                                                                        |    x     |                        |   
+| `contactInformation/phoneNumber` | Private phone number. Could be either mobile or land line.                            |    x     |                        |   
+
+> **Note:** `ContactInformation` on `student` is taken from `person`. When updating `contactInformation` on `student` it
+> will also update `contactInformation` on `person` and vice versa.
 
 #### Links
 
@@ -78,11 +106,20 @@ related to the student role.
 
 ### Employee
 
-<Badge text="GET /employees" type="info"/>
-<Badge text="GET /employees/{id}" type="info"/>
-<Badge text="PATCH /employees/{id}" type="info"/>
+<hr/>
+<p>
+Endpoints 
+<GetBadge path="/employees"/> <GetBadge path="/employess/{id}"/> <PatchBadge path="/employess/{id}"/>
+</p>
+<p>
+Scope
+<ScopeBadge scopeShortName="core-api.employees.read"/>
+<ScopeBadge scopeShortName="core-api.employees.write"/>
+</p>
+<hr/>
 
-The `employee` resource represents a `person` role as an employee at a `school`. All information on the `employee` object
+The `employee` resource represents a `person` role as an employee at a `school`. All information on the `employee`
+object
 is related to the employee role.
 
 #### Properties
@@ -108,8 +145,16 @@ is related to the employee role.
 
 ### School
 
-<Badge text="GET /schools" type="info"/>
-<Badge text="GET /schools/{id}" type="info"/>
+<hr/>
+<p>
+Endpoints 
+<GetBadge path="/schools"/> <GetBadge path="/schools/{id}"/>
+</p>
+<p>
+Scope
+<ScopeBadge scopeShortName="core-api.schools.read"/>
+</p>
+<hr/>
 
 The `school` resource represents a school. The school resource has information about the school, like name, address,
 `students` and `employees`.
